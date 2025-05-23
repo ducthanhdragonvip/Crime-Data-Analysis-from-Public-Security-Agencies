@@ -1,0 +1,469 @@
+2025-05-21 15:13:54,665 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 15:13:55,499 - INFO - Fetched 1394 new records.
+2025-05-21 15:13:55,922 - INFO - Records sent to Kafka successfully.
+2025-05-21 15:13:55,925 - INFO - Sleeping for 3600 seconds.
+2025-05-21 15:13:58,494 - INFO - Received shutdown signal, exiting.
+2025-05-21 15:33:50,787 - INFO - Starting Chicago Crimes Spark streaming processor.
+2025-05-21 15:33:50,788 - INFO - Initializing Spark session...
+2025-05-21 15:33:55,266 - INFO - Spark session initialized successfully.
+2025-05-21 15:33:55,266 - INFO - Starting Chicago crimes streaming processing.
+2025-05-21 15:33:55,629 - INFO - Kafka topic 'chicago_crimes' validated successfully.
+2025-05-21 15:34:01,237 - ERROR - Unexpected error in streaming process: An error occurred while calling o149.start.
+: java.lang.RuntimeException: java.io.FileNotFoundException: service_account.json (No such file or directory)
+	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:470)
+	at org.apache.spark.sql.execution.streaming.AbstractFileContextBasedCheckpointFileManager.<init>(CheckpointFileManager.scala:311)
+	at org.apache.spark.sql.execution.streaming.FileContextBasedCheckpointFileManager.<init>(CheckpointFileManager.scala:352)
+	at org.apache.spark.sql.execution.streaming.CheckpointFileManager$.create(CheckpointFileManager.scala:209)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.resolveCheckpointLocation(ResolveWriteToStream.scala:98)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$$anonfun$apply$1.applyOrElse(ResolveWriteToStream.scala:42)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$$anonfun$apply$1.applyOrElse(ResolveWriteToStream.scala:40)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$2(AnalysisHelper.scala:170)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$1(AnalysisHelper.scala:170)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:323)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning(AnalysisHelper.scala:168)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning$(AnalysisHelper.scala:164)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning(AnalysisHelper.scala:99)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning$(AnalysisHelper.scala:96)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators(AnalysisHelper.scala:76)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators$(AnalysisHelper.scala:75)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:32)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.apply(ResolveWriteToStream.scala:40)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.apply(ResolveWriteToStream.scala:39)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$2(RuleExecutor.scala:222)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1(RuleExecutor.scala:219)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1$adapted(RuleExecutor.scala:211)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:211)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.org$apache$spark$sql$catalyst$analysis$Analyzer$$executeSameContext(Analyzer.scala:240)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$execute$1(Analyzer.scala:236)
+	at org.apache.spark.sql.catalyst.analysis.AnalysisContext$.withNewAnalysisContext(Analyzer.scala:187)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:236)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$executeAndTrack$1(RuleExecutor.scala:182)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:89)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.executeAndTrack(RuleExecutor.scala:182)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:223)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:330)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:222)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:77)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:138)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:219)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:219)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:218)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:77)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:74)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.createQuery(StreamingQueryManager.scala:270)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.startQuery(StreamingQueryManager.scala:346)
+	at org.apache.spark.sql.streaming.DataStreamWriter.startQuery(DataStreamWriter.scala:433)
+	at org.apache.spark.sql.streaming.DataStreamWriter.startInternal(DataStreamWriter.scala:368)
+	at org.apache.spark.sql.streaming.DataStreamWriter.start(DataStreamWriter.scala:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.FileNotFoundException: service_account.json (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialFactory.getCredentialFromJsonKeyFile(CredentialFactory.java:297)
+	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialFactory.getCredential(CredentialFactory.java:414)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.getCredential(GoogleHadoopFileSystemBase.java:1479)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.createGcsFs(GoogleHadoopFileSystemBase.java:1638)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.configure(GoogleHadoopFileSystemBase.java:1620)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.initialize(GoogleHadoopFileSystemBase.java:507)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS.<init>(GoogleHadoopFS.java:65)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS.<init>(GoogleHadoopFS.java:54)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.apache.hadoop.fs.AbstractFileSystem.newInstance(AbstractFileSystem.java:143)
+	at org.apache.hadoop.fs.AbstractFileSystem.createFileSystem(AbstractFileSystem.java:181)
+	at org.apache.hadoop.fs.AbstractFileSystem.get(AbstractFileSystem.java:266)
+	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:342)
+	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:339)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.hadoop.fs.FileContext.getAbstractFileSystem(FileContext.java:339)
+	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:465)
+	... 66 more
+
+2025-05-21 15:34:01,237 - INFO - Restarting streaming process in 30 seconds...
+2025-05-21 15:34:31,276 - INFO - Kafka topic 'chicago_crimes' validated successfully.
+2025-05-21 15:34:32,213 - ERROR - Unexpected error in streaming process: An error occurred while calling o250.start.
+: java.lang.RuntimeException: java.io.FileNotFoundException: service_account.json (No such file or directory)
+	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:470)
+	at org.apache.spark.sql.execution.streaming.AbstractFileContextBasedCheckpointFileManager.<init>(CheckpointFileManager.scala:311)
+	at org.apache.spark.sql.execution.streaming.FileContextBasedCheckpointFileManager.<init>(CheckpointFileManager.scala:352)
+	at org.apache.spark.sql.execution.streaming.CheckpointFileManager$.create(CheckpointFileManager.scala:209)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.resolveCheckpointLocation(ResolveWriteToStream.scala:98)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$$anonfun$apply$1.applyOrElse(ResolveWriteToStream.scala:42)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$$anonfun$apply$1.applyOrElse(ResolveWriteToStream.scala:40)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$2(AnalysisHelper.scala:170)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$1(AnalysisHelper.scala:170)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:323)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning(AnalysisHelper.scala:168)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning$(AnalysisHelper.scala:164)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning(AnalysisHelper.scala:99)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning$(AnalysisHelper.scala:96)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators(AnalysisHelper.scala:76)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators$(AnalysisHelper.scala:75)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:32)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.apply(ResolveWriteToStream.scala:40)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.apply(ResolveWriteToStream.scala:39)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$2(RuleExecutor.scala:222)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1(RuleExecutor.scala:219)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1$adapted(RuleExecutor.scala:211)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:211)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.org$apache$spark$sql$catalyst$analysis$Analyzer$$executeSameContext(Analyzer.scala:240)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$execute$1(Analyzer.scala:236)
+	at org.apache.spark.sql.catalyst.analysis.AnalysisContext$.withNewAnalysisContext(Analyzer.scala:187)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:236)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$executeAndTrack$1(RuleExecutor.scala:182)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:89)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.executeAndTrack(RuleExecutor.scala:182)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:223)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:330)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:222)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:77)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:138)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:219)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:219)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:218)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:77)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:74)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.createQuery(StreamingQueryManager.scala:270)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.startQuery(StreamingQueryManager.scala:346)
+	at org.apache.spark.sql.streaming.DataStreamWriter.startQuery(DataStreamWriter.scala:433)
+	at org.apache.spark.sql.streaming.DataStreamWriter.startInternal(DataStreamWriter.scala:368)
+	at org.apache.spark.sql.streaming.DataStreamWriter.start(DataStreamWriter.scala:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.FileNotFoundException: service_account.json (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialFactory.getCredentialFromJsonKeyFile(CredentialFactory.java:297)
+	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialFactory.getCredential(CredentialFactory.java:414)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.getCredential(GoogleHadoopFileSystemBase.java:1479)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.createGcsFs(GoogleHadoopFileSystemBase.java:1638)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.configure(GoogleHadoopFileSystemBase.java:1620)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.initialize(GoogleHadoopFileSystemBase.java:507)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS.<init>(GoogleHadoopFS.java:65)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS.<init>(GoogleHadoopFS.java:54)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.apache.hadoop.fs.AbstractFileSystem.newInstance(AbstractFileSystem.java:143)
+	at org.apache.hadoop.fs.AbstractFileSystem.createFileSystem(AbstractFileSystem.java:181)
+	at org.apache.hadoop.fs.AbstractFileSystem.get(AbstractFileSystem.java:266)
+	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:342)
+	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:339)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.hadoop.fs.FileContext.getAbstractFileSystem(FileContext.java:339)
+	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:465)
+	... 66 more
+
+2025-05-21 15:34:32,213 - INFO - Restarting streaming process in 30 seconds...
+2025-05-21 15:34:53,472 - INFO - Received shutdown signal, exiting.
+2025-05-21 15:36:27,839 - INFO - Starting Chicago Crimes Spark streaming processor.
+2025-05-21 15:36:27,839 - INFO - Initializing Spark session...
+2025-05-21 15:36:31,618 - INFO - Spark session initialized successfully.
+2025-05-21 15:36:31,619 - INFO - Starting Chicago crimes streaming processing.
+2025-05-21 15:36:31,886 - INFO - Kafka topic 'chicago_crimes' validated successfully.
+2025-05-21 15:36:37,377 - ERROR - Unexpected error in streaming process: An error occurred while calling o149.start.
+: java.lang.RuntimeException: java.io.FileNotFoundException: service_account.json (No such file or directory)
+	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:470)
+	at org.apache.spark.sql.execution.streaming.AbstractFileContextBasedCheckpointFileManager.<init>(CheckpointFileManager.scala:311)
+	at org.apache.spark.sql.execution.streaming.FileContextBasedCheckpointFileManager.<init>(CheckpointFileManager.scala:352)
+	at org.apache.spark.sql.execution.streaming.CheckpointFileManager$.create(CheckpointFileManager.scala:209)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.resolveCheckpointLocation(ResolveWriteToStream.scala:98)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$$anonfun$apply$1.applyOrElse(ResolveWriteToStream.scala:42)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$$anonfun$apply$1.applyOrElse(ResolveWriteToStream.scala:40)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$2(AnalysisHelper.scala:170)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$1(AnalysisHelper.scala:170)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:323)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning(AnalysisHelper.scala:168)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning$(AnalysisHelper.scala:164)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning(AnalysisHelper.scala:99)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning$(AnalysisHelper.scala:96)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators(AnalysisHelper.scala:76)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators$(AnalysisHelper.scala:75)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:32)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.apply(ResolveWriteToStream.scala:40)
+	at org.apache.spark.sql.execution.streaming.ResolveWriteToStream$.apply(ResolveWriteToStream.scala:39)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$2(RuleExecutor.scala:222)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1(RuleExecutor.scala:219)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1$adapted(RuleExecutor.scala:211)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:211)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.org$apache$spark$sql$catalyst$analysis$Analyzer$$executeSameContext(Analyzer.scala:240)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$execute$1(Analyzer.scala:236)
+	at org.apache.spark.sql.catalyst.analysis.AnalysisContext$.withNewAnalysisContext(Analyzer.scala:187)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:236)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$executeAndTrack$1(RuleExecutor.scala:182)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:89)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.executeAndTrack(RuleExecutor.scala:182)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:223)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:330)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:222)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:77)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:138)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:219)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:219)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:218)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:77)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:74)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.createQuery(StreamingQueryManager.scala:270)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.startQuery(StreamingQueryManager.scala:346)
+	at org.apache.spark.sql.streaming.DataStreamWriter.startQuery(DataStreamWriter.scala:433)
+	at org.apache.spark.sql.streaming.DataStreamWriter.startInternal(DataStreamWriter.scala:368)
+	at org.apache.spark.sql.streaming.DataStreamWriter.start(DataStreamWriter.scala:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.FileNotFoundException: service_account.json (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialFactory.getCredentialFromJsonKeyFile(CredentialFactory.java:297)
+	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialFactory.getCredential(CredentialFactory.java:414)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.getCredential(GoogleHadoopFileSystemBase.java:1479)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.createGcsFs(GoogleHadoopFileSystemBase.java:1638)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.configure(GoogleHadoopFileSystemBase.java:1620)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase.initialize(GoogleHadoopFileSystemBase.java:507)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS.<init>(GoogleHadoopFS.java:65)
+	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS.<init>(GoogleHadoopFS.java:54)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.apache.hadoop.fs.AbstractFileSystem.newInstance(AbstractFileSystem.java:143)
+	at org.apache.hadoop.fs.AbstractFileSystem.createFileSystem(AbstractFileSystem.java:181)
+	at org.apache.hadoop.fs.AbstractFileSystem.get(AbstractFileSystem.java:266)
+	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:342)
+	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:339)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.hadoop.fs.FileContext.getAbstractFileSystem(FileContext.java:339)
+	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:465)
+	... 66 more
+
+2025-05-21 15:36:37,378 - INFO - Restarting streaming process in 30 seconds...
+2025-05-21 15:36:43,030 - INFO - Received shutdown signal, exiting.
+2025-05-21 15:37:08,297 - INFO - Starting Chicago Crimes Spark streaming processor.
+2025-05-21 15:37:08,298 - INFO - Initializing Spark session...
+2025-05-21 15:37:12,033 - INFO - Spark session initialized successfully.
+2025-05-21 15:37:12,033 - INFO - Starting Chicago crimes streaming processing.
+2025-05-21 15:37:12,408 - INFO - Kafka topic 'chicago_crimes' validated successfully.
+2025-05-21 15:37:20,147 - INFO - Streaming query started successfully.
+2025-05-21 15:37:33,701 - INFO - Batch 7 written to gs://crime-data-group8/US-chicago/2020To-Present/streaming_output
+2025-05-21 15:38:06,447 - ERROR - Unexpected error in streaming process: An error occurred while calling o150.awaitTermination
+2025-05-21 15:38:06,448 - INFO - Restarting streaming process in 30 seconds...
+2025-05-21 18:30:03,381 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 18:30:03,749 - INFO - Fetched 0 new records.
+2025-05-21 18:30:03,751 - INFO - Records sent to Kafka successfully.
+2025-05-21 18:30:03,753 - INFO - Sleeping for 3600 seconds.
+2025-05-21 18:30:06,378 - INFO - Received shutdown signal, exiting.
+2025-05-21 18:31:02,908 - INFO - Starting Seattle Crimes Kafka ingestion service.
+2025-05-21 18:31:02,918 - ERROR - Error in Seattle ingestion process: load_last_updated() takes 0 positional arguments but 1 was given
+2025-05-21 18:31:02,920 - INFO - Sleeping for 3600 seconds.
+2025-05-21 18:31:10,242 - INFO - Received shutdown signal, exiting.
+2025-05-21 18:31:47,478 - INFO - Starting Seattle Crimes Kafka ingestion service.
+2025-05-21 18:31:47,485 - ERROR - Error in Seattle ingestion process: load_last_updated() takes 0 positional arguments but 1 was given
+2025-05-21 18:31:47,488 - INFO - Sleeping for 3600 seconds.
+2025-05-21 18:31:56,467 - INFO - Received shutdown signal, exiting.
+2025-05-21 18:38:46,406 - INFO - Starting Seattle Crimes Kafka ingestion service.
+2025-05-21 18:38:46,419 - ERROR - Error in Seattle ingestion process: load_last_updated() takes 0 positional arguments but 1 was given
+2025-05-21 18:38:46,422 - INFO - Sleeping for 3600 seconds.
+2025-05-21 18:38:55,958 - INFO - Received shutdown signal, exiting.
+2025-05-21 18:40:38,072 - INFO - Starting Seattle Crimes Kafka ingestion service.
+2025-05-21 18:40:38,079 - ERROR - Error in Seattle ingestion process: load_last_updated() takes 0 positional arguments but 1 was given
+2025-05-21 18:40:38,080 - INFO - Sleeping for 3600 seconds.
+2025-05-21 18:40:41,183 - INFO - Received shutdown signal, exiting.
+2025-05-21 18:41:38,963 - INFO - Starting Seattle Crimes Kafka ingestion service.
+2025-05-21 18:41:38,971 - ERROR - Error in Seattle ingestion process: load_last_updated() takes 0 positional arguments but 1 was given
+2025-05-21 18:41:38,973 - INFO - Sleeping for 3600 seconds.
+2025-05-21 18:41:44,294 - INFO - Received shutdown signal, exiting.
+2025-05-21 18:41:55,083 - INFO - Starting Seattle Crimes Kafka ingestion service.
+2025-05-21 18:41:55,089 - ERROR - Error in Seattle ingestion process: load_last_updated() takes 0 positional arguments but 1 was given
+2025-05-21 18:41:55,093 - INFO - Sleeping for 3600 seconds.
+2025-05-21 18:42:14,656 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:07:55,365 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:07:55,367 - ERROR - Unexpected error in main loop: __init__() got an unexpected keyword argument 'timestamp_file'
+2025-05-21 20:07:55,367 - INFO - Retrying after 3600 seconds.
+2025-05-21 20:10:27,302 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:10:27,303 - ERROR - Unexpected error in main loop: __init__() got an unexpected keyword argument 'timestamp_file'
+2025-05-21 20:10:27,303 - INFO - Retrying after 3600 seconds.
+2025-05-21 20:11:05,577 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:11:05,577 - ERROR - Unexpected error in main loop: __init__() got an unexpected keyword argument 'timestamp_file'
+2025-05-21 20:11:05,578 - INFO - Retrying after 3600 seconds.
+2025-05-21 20:12:40,330 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:12:40,755 - INFO - Fetched 0 new records.
+2025-05-21 20:12:40,755 - INFO - Records sent to Kafka successfully.
+2025-05-21 20:12:40,758 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:12:46,782 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:12:57,717 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:13:10,520 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:15:11,726 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:15:23,752 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:15:46,116 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:15:47,323 - INFO - Fetched 2059 new records.
+2025-05-21 20:15:47,955 - INFO - Records sent to Kafka successfully.
+2025-05-21 20:15:47,958 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:16:01,560 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:16:10,417 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:16:17,864 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:18:45,534 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:18:47,419 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:19:06,390 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:19:27,291 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:21:03,709 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:21:29,990 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:23:53,526 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:23:54,325 - INFO - Fetched 1394 new records.
+2025-05-21 20:23:54,743 - INFO - Records sent to Kafka successfully.
+2025-05-21 20:23:54,746 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:23:57,373 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:24:14,598 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:24:29,757 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:24:54,721 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:25:01,575 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:28:08,095 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:28:11,193 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:28:18,355 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:28:18,727 - INFO - Fetched 775 new records.
+2025-05-21 20:28:19,078 - INFO - Records sent to Kafka successfully.
+2025-05-21 20:28:19,080 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:28:21,174 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:32:07,713 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:32:18,571 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:33:07,247 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:33:14,931 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:33:56,448 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:34:04,733 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:42:21,810 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:42:30,392 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:43:45,110 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:44:09,866 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:46:49,239 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:46:49,239 - ERROR - Unexpected error in main loop: A domain is required.
+2025-05-21 20:46:49,239 - INFO - Retrying after 3600 seconds.
+2025-05-21 20:47:06,051 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:47:06,060 - ERROR - Error in ingestion process: load_last_updated() takes 0 positional arguments but 1 was given
+2025-05-21 20:47:06,061 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:47:17,744 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:47:28,178 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:47:33,151 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:47:52,181 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:47:52,631 - INFO - Fetched 775 new records.
+2025-05-21 20:47:52,866 - INFO - Records sent to Kafka successfully.
+2025-05-21 20:47:52,869 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:47:57,217 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:48:04,575 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:48:05,233 - INFO - Fetched 1394 new records.
+2025-05-21 20:48:05,739 - INFO - Records sent to Kafka successfully.
+2025-05-21 20:48:05,743 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:48:10,563 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:48:17,578 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:48:22,908 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:48:46,929 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:48:47,852 - INFO - Fetched 2059 new records.
+2025-05-21 20:48:48,481 - INFO - Records sent to Kafka successfully.
+2025-05-21 20:48:48,485 - INFO - Sleeping for 3600 seconds.
+2025-05-21 20:48:50,731 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:49:01,093 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:49:04,395 - INFO - Received shutdown signal, exiting.
+2025-05-21 20:58:14,290 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:58:14,291 - ERROR - Unexpected error in main loop: Basic authentication requires a username AND password.
+2025-05-21 20:58:14,291 - INFO - Retrying after 3600 seconds.
+2025-05-21 20:59:58,981 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 20:59:59,371 - WARNING - API attempt 1 failed: 403 Client Error: Forbidden.
+	Authentication failed: Invalid username or password. Retrying in 1 seconds.
+2025-05-21 21:00:00,514 - WARNING - API attempt 2 failed: 403 Client Error: Forbidden.
+	Authentication failed: Invalid username or password. Retrying in 2 seconds.
+2025-05-21 21:00:02,609 - ERROR - API failed after 3 attempts: 403 Client Error: Forbidden.
+	Authentication failed: Invalid username or password
+2025-05-21 21:00:02,610 - INFO - Fetched 0 new records.
+2025-05-21 21:00:02,610 - INFO - Records sent to Kafka successfully.
+2025-05-21 21:00:02,613 - INFO - Sleeping for 3600 seconds.
+2025-05-21 21:00:04,742 - INFO - Received shutdown signal, exiting.
+2025-05-21 21:00:28,114 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 21:00:28,326 - WARNING - API attempt 1 failed: 403 Client Error: Forbidden.
+	Authentication failed: Invalid username or password. Retrying in 1 seconds.
+2025-05-21 21:00:29,389 - WARNING - API attempt 2 failed: 403 Client Error: Forbidden.
+	Authentication failed: Invalid username or password. Retrying in 2 seconds.
+2025-05-21 21:00:31,453 - ERROR - API failed after 3 attempts: 403 Client Error: Forbidden.
+	Authentication failed: Invalid username or password
+2025-05-21 21:00:31,454 - INFO - Fetched 0 new records.
+2025-05-21 21:00:31,454 - INFO - Records sent to Kafka successfully.
+2025-05-21 21:00:31,456 - INFO - Sleeping for 3600 seconds.
+2025-05-21 21:00:31,976 - INFO - Received shutdown signal, exiting.
+2025-05-21 21:04:19,629 - INFO - Starting Chicago Crimes Kafka ingestion service.
+2025-05-21 21:06:24,641 - INFO - Fetched 247247 new records.
+2025-05-21 21:06:45,430 - INFO - Received shutdown signal, exiting.

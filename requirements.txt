@@ -1,0 +1,6 @@
+sodapy
+kafka-python
+pyspark
+retrying
+python-dotenv
+pytest

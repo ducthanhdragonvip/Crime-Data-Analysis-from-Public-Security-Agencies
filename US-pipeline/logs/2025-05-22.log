@@ -1,0 +1,331 @@
+2025-05-22 14:08:50,510 - INFO - Preparing to start processor for Chicago.
+2025-05-22 14:08:50,521 - INFO - Preparing to start processor for Seattle.
+2025-05-22 14:08:52,499 - INFO - Starting Seattle Crimes Spark streaming processor in process.
+2025-05-22 14:08:52,552 - INFO - Starting Chicago Crimes Spark streaming processor in process.
+2025-05-22 14:10:03,549 - INFO - Preparing to start processor for Chicago.
+2025-05-22 14:10:03,562 - INFO - Preparing to start processor for Seattle.
+2025-05-22 14:10:07,366 - INFO - Starting Chicago Crimes Spark streaming processor in process.
+2025-05-22 14:10:07,432 - INFO - Starting Seattle Crimes Spark streaming processor in process.
+2025-05-22 14:14:12,287 - INFO - Preparing to start processor for Chicago.
+2025-05-22 14:14:12,298 - INFO - Preparing to start processor for Seattle.
+2025-05-22 14:14:14,231 - INFO - Starting Chicago Crimes Spark streaming processor in process.
+2025-05-22 14:14:14,233 - INFO - Starting Seattle Crimes Spark streaming processor in process.
+2025-05-22 14:14:55,645 - INFO - Preparing to start processor for Chicago.
+2025-05-22 14:14:55,656 - INFO - Preparing to start processor for Seattle.
+2025-05-22 14:14:57,583 - INFO - Starting Chicago Crimes Spark streaming processor in process.
+2025-05-22 14:14:57,584 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:14:57,585 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: 'ChicagoStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:14:57,631 - INFO - Starting Seattle Crimes Spark streaming processor in process.
+2025-05-22 14:14:57,632 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:14:57,632 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: 'SeattleStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:14:59,586 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:14:59,586 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: 'ChicagoStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:14:59,633 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:14:59,633 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: 'SeattleStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:15:03,590 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:15:03,590 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: 'ChicagoStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:15:03,637 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:15:03,638 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: 'SeattleStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:16:26,521 - INFO - Preparing to start processor for Chicago.
+2025-05-22 14:16:26,531 - INFO - Preparing to start processor for Seattle.
+2025-05-22 14:16:28,473 - INFO - Starting Chicago Crimes Spark streaming processor in process.
+2025-05-22 14:16:28,474 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:16:28,474 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: 'ChicagoStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:16:28,504 - INFO - Starting Seattle Crimes Spark streaming processor in process.
+2025-05-22 14:16:28,504 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:16:28,505 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: 'SeattleStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:16:30,476 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:16:30,477 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: 'ChicagoStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:16:30,507 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:16:30,507 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: 'SeattleStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:16:34,481 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:16:34,482 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: 'ChicagoStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:16:34,511 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:16:34,511 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: 'SeattleStreamProcessor' object has no attribute 'checkpoint_path'
+2025-05-22 14:18:07,796 - INFO - Preparing to start processor for Chicago.
+2025-05-22 14:18:07,806 - INFO - Preparing to start processor for Seattle.
+2025-05-22 14:18:09,764 - INFO - Starting Chicago Crimes Spark streaming processor in process.
+2025-05-22 14:18:09,765 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:18:10,253 - INFO - Starting Seattle Crimes Spark streaming processor in process.
+2025-05-22 14:18:10,254 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:18:11,994 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: java.nio.file.FileAlreadyExistsException: /tmp/spark-9e861d99-6bfb-435c-a850-50c9537512d6/userFiles-ec11eb09-c0de-4300-895d-7f0a70fa75c7/deps.zip
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:573)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:257)
+	at java.base/java.nio.file.Files.copy(Files.java:1305)
+	at org.apache.spark.util.Utils$.copyRecursive(Utils.scala:681)
+	at org.apache.spark.util.Utils$.copyFile(Utils.scala:652)
+	at org.apache.spark.util.Utils$.doFetchFile(Utils.scala:725)
+	at org.apache.spark.util.Utils$.fetchFile(Utils.scala:467)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1790)
+	at org.apache.spark.SparkContext.$anonfun$new$16(SparkContext.scala:528)
+	at org.apache.spark.SparkContext.$anonfun$new$16$adapted(SparkContext.scala:528)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:528)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-22 14:18:12,079 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: java.lang.NullPointerException: Cannot invoke "org.apache.spark.SparkEnv.driverTmpDir()" because the return value of "org.apache.spark.SparkEnv$.get()" is null
+	at org.apache.spark.SparkFiles$.getRootDirectory(SparkFiles.scala:37)
+	at org.apache.spark.SparkContext.root$lzycompute$1(SparkContext.scala:1780)
+	at org.apache.spark.SparkContext.root$1(SparkContext.scala:1775)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1790)
+	at org.apache.spark.SparkContext.$anonfun$new$16(SparkContext.scala:528)
+	at org.apache.spark.SparkContext.$anonfun$new$16$adapted(SparkContext.scala:528)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:528)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-22 14:18:13,997 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:18:14,081 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:18:14,677 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: org.apache.spark.SparkException: File /tmp/spark-9e861d99-6bfb-435c-a850-50c9537512d6/userFiles-c19711ca-9388-4df5-a7c9-e8df7551521b/org.apache.hadoop_hadoop-client-api-3.3.4.jar exists and does not match contents of file:///home/JT/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+	at org.apache.spark.util.Utils$.copyFile(Utils.scala:632)
+	at org.apache.spark.util.Utils$.doFetchFile(Utils.scala:725)
+	at org.apache.spark.util.Utils$.fetchFile(Utils.scala:467)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1790)
+	at org.apache.spark.SparkContext.$anonfun$new$16(SparkContext.scala:528)
+	at org.apache.spark.SparkContext.$anonfun$new$16$adapted(SparkContext.scala:528)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:528)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-22 14:18:14,759 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: java.lang.NullPointerException: Cannot invoke "org.apache.spark.SparkEnv.driverTmpDir()" because the return value of "org.apache.spark.SparkEnv$.get()" is null
+	at org.apache.spark.SparkFiles$.getRootDirectory(SparkFiles.scala:37)
+	at org.apache.spark.SparkContext.root$lzycompute$1(SparkContext.scala:1780)
+	at org.apache.spark.SparkContext.root$1(SparkContext.scala:1775)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1790)
+	at org.apache.spark.SparkContext.$anonfun$new$16(SparkContext.scala:528)
+	at org.apache.spark.SparkContext.$anonfun$new$16$adapted(SparkContext.scala:528)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:528)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-22 14:18:18,682 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:18:18,761 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:18:19,154 - ERROR - Failed to initialize Spark session for SeattleCrimesStreamProcessor: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: org.apache.spark.SparkException: File /tmp/spark-9e861d99-6bfb-435c-a850-50c9537512d6/userFiles-8c211570-1aa9-420d-92d6-c287adffcf53/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar exists and does not match contents of file:///home/JT/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+	at org.apache.spark.util.Utils$.copyFile(Utils.scala:632)
+	at org.apache.spark.util.Utils$.doFetchFile(Utils.scala:725)
+	at org.apache.spark.util.Utils$.fetchFile(Utils.scala:467)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1790)
+	at org.apache.spark.SparkContext.$anonfun$new$16(SparkContext.scala:528)
+	at org.apache.spark.SparkContext.$anonfun$new$16$adapted(SparkContext.scala:528)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:528)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-22 14:18:19,216 - ERROR - Failed to initialize Spark session for ChicagoCrimesStreamProcessor: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: java.lang.NullPointerException: Cannot invoke "org.apache.spark.SparkEnv.driverTmpDir()" because the return value of "org.apache.spark.SparkEnv$.get()" is null
+	at org.apache.spark.SparkFiles$.getRootDirectory(SparkFiles.scala:37)
+	at org.apache.spark.SparkContext.root$lzycompute$1(SparkContext.scala:1780)
+	at org.apache.spark.SparkContext.root$1(SparkContext.scala:1775)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1790)
+	at org.apache.spark.SparkContext.$anonfun$new$16(SparkContext.scala:528)
+	at org.apache.spark.SparkContext.$anonfun$new$16$adapted(SparkContext.scala:528)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:528)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-22 14:40:35,362 - INFO - Starting Chicago Crimes Spark streaming processor.
+2025-05-22 14:40:35,363 - INFO - Initializing Spark session for ChicagoCrimesStreamProcessor...
+2025-05-22 14:40:39,637 - INFO - Spark session for ChicagoCrimesStreamProcessor initialized successfully.
+2025-05-22 14:40:39,638 - INFO - Starting streaming processing for ChicagoStreamProcessor.
+2025-05-22 14:40:39,892 - INFO - Kafka topic 'chicago_crimes' validated successfully.
+2025-05-22 14:40:47,886 - INFO - Streaming query started successfully.
+2025-05-22 14:41:04,288 - ERROR - Unexpected error in streaming process: An error occurred while calling o150.awaitTermination
+2025-05-22 14:41:04,288 - INFO - Restarting streaming process in 30 seconds...
+2025-05-22 14:41:04,418 - ERROR - Error in Chicago processor: An error occurred while calling o150.stop.
+: java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+This stopped SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:840)
+
+The currently active SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:840)
+         
+	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:122)
+	at org.apache.spark.SparkContext.cancelJobGroup(SparkContext.scala:2572)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.stop(MicroBatchExecution.scala:210)
+	at org.apache.spark.sql.execution.streaming.StreamingQueryWrapper.stop(StreamingQueryWrapper.scala:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-22 14:41:19,159 - INFO - Starting Seattle Crimes Spark streaming processor.
+2025-05-22 14:41:19,160 - INFO - Initializing Spark session for SeattleCrimesStreamProcessor...
+2025-05-22 14:41:22,804 - INFO - Spark session for SeattleCrimesStreamProcessor initialized successfully.
+2025-05-22 14:41:22,804 - INFO - Starting streaming processing for SeattleStreamProcessor.
+2025-05-22 14:41:23,179 - INFO - Kafka topic 'seattle_crimes' validated successfully.
+2025-05-22 14:41:31,287 - INFO - Streaming query started successfully.
+2025-05-22 14:41:42,593 - INFO - Batch 0 written to gs://crime-data-group8/US-seattle/streaming_output successfully.
+2025-05-22 14:42:28,352 - ERROR - Unexpected error in streaming process: An error occurred while calling o125.awaitTermination
+2025-05-22 14:42:28,352 - INFO - Restarting streaming process in 30 seconds...
+2025-05-22 14:42:28,480 - ERROR - Error in Seattle processor: An error occurred while calling o125.stop.
+: java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+This stopped SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:840)
+
+The currently active SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:840)
+         
+	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:122)
+	at org.apache.spark.SparkContext.cancelJobGroup(SparkContext.scala:2572)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.stop(MicroBatchExecution.scala:210)
+	at org.apache.spark.sql.execution.streaming.StreamingQueryWrapper.stop(StreamingQueryWrapper.scala:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
