@@ -57,21 +57,40 @@ A real-time data pipeline that ingests crime data from Chicago's open data porta
 - Google Cloud Storage access
 - Socrata API access
 
-<!-- ## Installation
-
-1. Clone the repository
-2. Create and activate a virtual environment
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt -->
-
-nohup python3 -m scripts.run_ingestion > output.log 2>&1 &
-
-nohup spark-submit \
-    --master spark://10.128.0.3:7077 \
-    --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.5  \
-    --files config/settings.py,utils/logging.py,utils/file_handlers.py \
-    --py-files data_pipeline/processing/spark_processor.py,data_pipeline/processing/schemas.py \
-    scripts/run_processing.py &
 
 
+## How to Run
+
+### 1. Data Ingestion
+Run the data ingestion script to fetch data from the sources and publish to Kafka:
+
+```bash
+cd US-pipeline
+python3 -m scripts.run_chicago ## or scripts.run_seattle
+```
+
+### 2. Spark Processing
+Submit the Spark job to process the data streams from Kafka:
+
+```bash
+cd US-pipeline
+spark-submit \
+    --master your spark-master-ip \
+    --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.5 \
+    --py-files deps.zip \
+    --conf spark.submit.pyFiles=deps.zip \
+    --conf spark.executorEnv.PYTHONPATH=deps.zip \
+    --conf spark.driver.extraPythonPath=deps.zip \
+    --conf spark.executor.extraPythonPath=deps.zip \
+    scripts/run_chicago.py ## or scripts/run_seattle.py
+```
+### Or run simple script
+
+```bash
+cd Simple script
+python3 scripts.py 
+
+spark-submit --master your spark-master-ip   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.5 stream_to_gcs.py
+
+## the same with UK
+```
