@@ -1,4 +1,4 @@
-# Chicago Crimes Data Pipeline
+# Crime Data Analysis from Public Security Agencies
 
 A real-time data pipeline that ingests crime data from Chicago's open data portal, processes it through Kafka, and stores it in Google Cloud Storage using Spark.
 
@@ -61,19 +61,12 @@ A real-time data pipeline that ingests crime data from Chicago's open data porta
 
 ## How to Run
 
-### 1. Data Ingestion
-Run the data ingestion script to fetch data from the sources and publish to Kafka:
-
-```bash
-cd US-pipeline
-python3 -m scripts.run_chicago ## or scripts.run_seattle
-```
-
-### 2. Spark Processing
+### 1. Spark Processing
 Submit the Spark job to process the data streams from Kafka:
 
 ```bash
 cd US-pipeline
+zip -r deps.zip data_pipeline config utils
 spark-submit \
     --master your spark-master-ip \
     --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.5 \
@@ -84,6 +77,15 @@ spark-submit \
     --conf spark.executor.extraPythonPath=deps.zip \
     scripts/run_chicago.py ## or scripts/run_seattle.py
 ```
+### 2. Data Ingestion
+Run the data ingestion script to fetch data from the sources and publish to Kafka:
+
+```bash
+cd US-pipeline
+python3 -m scripts.run_chicago ## or scripts.run_seattle
+```
+
+
 ### Or run simple script
 
 ```bash
